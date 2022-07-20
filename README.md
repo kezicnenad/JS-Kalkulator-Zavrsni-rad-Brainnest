@@ -1,5 +1,5 @@
 # brainnest-js
 
-Assigment 3 - JS
+Assigment 3 - JavaScript Part 1
 
 https://kezicnenad.github.io/brainnest-js
