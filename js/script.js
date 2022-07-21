@@ -32,6 +32,27 @@ function playGame() {
   computersChoice();
 
   checkDetails(playerSelection, computerSelection);
+
+  if (playerSelection === "rock" && computerSelection === "scissors") {
+    playerResult++;
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    playerResult++;
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    playerResult++;
+  } else if (playerSelection === computerSelection) {
+    playerResult = playerResult;
+    computerResult = computerResult;
+  } else {
+    computerResult++;
+  }
+
+  if (playerResult > computerResult) {
+    console.log("Player wins");
+  } else if (playerResult === computerResult) {
+    console.log("Tye");
+  } else {
+    console.log("Computer wins");
+  }
 }
 
 function checkDetails(player, computer) {
@@ -40,11 +61,15 @@ function checkDetails(player, computer) {
 
     roundCounter++;
 
+    if (roundCounter < 5){
+      playGame();
+    } else {
+      console.log("Igra gotova");
+    }
     // UVJET AKO JE MANJE OD 5 KOLA
     // UVJET KO JE POBJEDNIK
 
     // UVJET AKO JE VIŠE OD 5 KOLA DAJ POBJEDNIKA
-    playGame();
   } else {
     console.log("Incorrect entry. Try again");
     playGame();
