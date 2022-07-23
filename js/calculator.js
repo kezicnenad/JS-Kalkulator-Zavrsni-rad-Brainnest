@@ -1,15 +1,19 @@
-function display(val) {
+function handleDisplay(val) {
   document.getElementById("result").value += val;
   return val;
 }
 
-function solve() {
-  let x = document.getElementById("result").value;
+function sum() {
+  let inputValue = document.getElementById("result").value;
 
-  let y = eval(x);
-  document.getElementById("result").value = y;
+  let outputValue = eval(inputValue);
+  document.getElementById("result").value = outputValue;
+
+  if (outputValue === undefined){
+    document.getElementById("result").value = "Error!";
+  }
   
-  return y;
+  return outputValue;
 }
 
 function clearScreen() {
