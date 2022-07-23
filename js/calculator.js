@@ -19,3 +19,12 @@ function sum() {
 function clearScreen() {
   document.getElementById("result").value = "";
 }
+
+function removeLastEntry() {
+  let val = document.getElementById("result").value;
+  document.getElementById("result").value = val.slice(0, -1);
+
+  if (val === ""){
+    alert('Cannot be empty entry');
+  }
+}
