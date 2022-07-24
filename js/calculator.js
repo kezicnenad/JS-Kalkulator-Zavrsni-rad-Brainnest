@@ -3,7 +3,7 @@ function handleDisplay(val) {
   return val;
 }
 
-function sum() {
+function operation() {
   let inputValue = document.getElementById("result").value;
 
   let outputValue = eval(inputValue);

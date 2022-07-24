@@ -1,7 +1,9 @@
+input{
+    border-radius: 5px;
+}
 .container {
     border: 1px solid #cccccc;
-    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
-    border-radius: 20px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,.2);
     position: absolute;
     top: 55%;
     left: 50%;
@@ -20,35 +22,40 @@
     height: 60px;
     padding: 5px;
     background-color: #fff;
-    border-radius: 3px;
     border: 1px solid #c4c4c4;
     background-color: transparent;
     font-size: 2rem;
     color: #333;
-    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0,0,0,.04));
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
-    text-shadow: 0 1px rgba(255,255,255,.4);
 }
 .button:hover {
     background-color: #eaeaea;
 }
 .operator {
-    color: #fff;
-    background-color: #eebb24;
+    color: #333;
+    background-color: #eeeeee;
+    border-width: 1px;
+    font-size: 2rem;
+}
+.operator:hover {
+    background-color: #aaa;
 }
 .clear {
     background-color: #f0595f;
-    border-color: #b0353a;
+    border-width: 1px;
     color: #fff;
     width: 80px;
-    height: 30px;  
+    height: 40px;
+    font-weight: 900;
 }
 .clear:hover {
     background-color: #f17377;
 }
 .delete{
-    background-color: #fff;
+    background-color: #eee;
     color: #333;
+}
+.delete:hover{
+    background-color: #aaa;
 }
 .equal-sign {
     background-color: #25a8e0;
@@ -59,10 +66,12 @@
     background-color: #4e9ed4;
 }
 .screen{
-    background-color:rgb(171, 219, 231);
+    background-color:rgb(209, 239, 247);
     justify-content: left;
     text-align: right;
     color: black;
+    border-width: 1px;
+    border-color: #25a8e0;
     font-size: medium;
     width: 50%;
     height: 30%;
