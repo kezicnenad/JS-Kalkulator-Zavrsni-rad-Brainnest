@@ -1,4 +1,4 @@
-function showThisOnDisplay(val) {
+function putThisOnDisplay(val) {
   document.getElementById("result").value += val;
   return val;
 }
