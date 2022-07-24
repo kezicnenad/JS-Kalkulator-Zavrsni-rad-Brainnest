@@ -2,6 +2,6 @@
 
 Assigment 3 - JavaScript Part 2
 
-Calculator App
+Calculator
 
 https://kezicnenad.github.io/brainnest-js
