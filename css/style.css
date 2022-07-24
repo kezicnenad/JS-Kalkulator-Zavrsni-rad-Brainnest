@@ -14,7 +14,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding: 10px;
-    margin:auto;
+    margin: 10px;
 }
 .button {
     height: 60px;
@@ -46,6 +46,10 @@
 .clear:hover {
     background-color: #f17377;
 }
+.delete{
+    background-color: #fff;
+    color: #333;
+}
 .equal-sign {
     background-color: #25a8e0;
     border-color: #25a8e0;
@@ -57,13 +61,13 @@
 .screen{
     background-color:rgb(171, 219, 231);
     justify-content: left;
+    text-align: right;
     color: black;
     font-size: medium;
     width: 50%;
     height: 30%;
     cursor: default;
     padding: 10px; 
-    padding-left: 40%;
-    margin: auto;
+    margin: 10px;
     margin-bottom: 10px;
 }
