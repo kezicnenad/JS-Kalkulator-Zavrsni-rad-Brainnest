@@ -9,28 +9,33 @@
   <title>Calculator</title>
 </head>
 <body>
-  <div class="container">
-    <input type='text' id='result' class='screen'>
-    <input type='button' value='C' onclick="clearScreen()" class="clear">
-    <input type="button" value="<" onclick="removeLastEntry()" class="delete clear">
-
-    <div class="keys">
-      <input type="button" value="7" class="button" onClick="putThisOnDisplay('7')"></input>
-      <input type="button" value="8" class="button " onClick="putThisOnDisplay('8')"></input>
-      <input type="button" value="9" class="button" onClick="putThisOnDisplay('9')"></input>
-      <input type="button" value="/" class="operator" onClick="putThisOnDisplay('/')"></input>
-      <input type="button" value="4" class="button" onClick="putThisOnDisplay('4')"></input>
-      <input type="button" value="5" class="button" onClick="putThisOnDisplay('5')"></input>
-      <input type="button" value="6" class="button" onClick="putThisOnDisplay('6')"></input>
-      <input type="button" value="*" class="operator" onClick="putThisOnDisplay('*')"></input>
-      <input type="button" value="1" class="button" onClick="putThisOnDisplay('1')"></input>
-      <input type="button" value="2" class="button" onClick="putThisOnDisplay('2')"></input>
-      <input type="button" value="3" class="button" onClick="putThisOnDisplay('3')"></input>
-      <input type="button" value="-" class="operator" onClick="putThisOnDisplay('-')"></input>
-      <input type="button" value="0" class="button" onClick="putThisOnDisplay('0')"></input>
-      <input type="button" value="." class="button" onClick="putThisOnDisplay('.')"></input>
-      <input type="button" value="=" class="button equal-sign" onClick="operation()"></input>
-      <input type="button" value="+" class="operator" onClick="putThisOnDisplay('+')"></input>
-    </div>
+<div class="calculator">
+  <input type="text" class="calculator-screen" value="0" disabled>
+  <div class="row">
+    <button class="all-clear">AC</button>
+    <button class="operator" value="/">&divide;</button>
   </div>
+  <div class="row">
+    <button class="number" value="7">7</button>
+    <button class="number" value="8">8</button>
+    <button class="number" value="9">9</button>
+    <button class="operator" value="*">*</button>
+  </div>
+  <div class="row">
+    <button class="number" value="4">4</button>
+    <button class="number" value="5">5</button>
+    <button class="number" value="6">6</button>
+    <button class="operator" value="-">-</button>
+  </div>
+  <div class="row">
+    <button class="number" value="1">1</button>
+    <button class="number" value="2">2</button>
+    <button class="number" value="3">3</button>
+    <button class="operator" value="+">+</button>
+  </div>
+  <div class="row">
+    <button class="number zero-btn" value="0">0</button>
+    <button class="equal-sign">=</button>
+  </div>
+</div>
 </body>

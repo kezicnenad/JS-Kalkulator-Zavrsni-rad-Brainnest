@@ -1,30 +1,88 @@
-function putThisOnDisplay(val) {
-  document.getElementById("result").value += val;
-  return val;
-}
+const calculatorScreen = document.querySelector(".calculator-screen");
 
-function operation() {
-  let inputValue = document.getElementById("result").value;
+const updateScreen = (number) => {
+  calculatorScreen.value = number;
+};
 
-  let outputValue = eval(inputValue);
-  document.getElementById("result").value = outputValue;
+const numbers = document.querySelectorAll(".number");
 
-  if (outputValue === undefined){
-    document.getElementById("result").value = "Error!";
+let prevInput = "0";
+let calOperator = "";
+let currentInp = "0";
+
+const inputNumber = (number) => {
+  if (currentInput === "0") {
+    currentInput = number;
+  } else {
+    currentInput = currentInput + number;
   }
-  
-  return outputValue;
-}
+};
 
-function clearScreen() {
-  document.getElementById("result").value = "";
-}
+numbers.forEach((number) => {
+  number.addEventListener("click", (event) => {
+    inputNumber(event.target.value);
+    updateScreen(currentInput);
+  });
+});
 
-function removeLastEntry() {
-  let val = document.getElementById("result").value;
-  document.getElementById("result").value = val.slice(0, -1);
+const operators = document.querySelectorAll(".operator");
+const inputOperator = (operator) => {
+  prevInput = currentInput;
+  calculationOperator = operator;
+  updateScreen(operator);
+  currentInput = "0";
+};
+operators.forEach((operator) => {
+  operator.addEventListener("click", (event) => {
+    inputOperator(event.target.value);
+  });
+});
 
-  if (val === ""){
-    alert('Cannot be empty entry');
+const equalSign = document.querySelector(".equal-sign");
+
+equalSign.addEventListener("click", () => {
+  calculate();
+  updateScreen(currentInput);
+});
+
+const calculate = () => {
+  let result = 0;
+  switch (calculationOperator) {
+    case "+":
+      result = parseInt(prevInput) + parseInt(currentInput);
+      break;
+    case "-":
+      result = parseInt(prevInput) - parseInt(currentInput);
+      break;
+    case "*":
+      result = parseInt(prevInput) * parseInt(currentInput);
+      break;
+    case "/":
+      result = parseInt(prevInput) / parseInt(currentInput);
+      break;
+    case "%":
+      result = (parseInt(prevInput) / 100) * parseInt(currentInput);
+      break;
+    default:
+      return;
   }
-}
+  currentInput = result.toString();
+  calculationOperator = "";
+};
+
+const clearBtn = document.querySelector(".all-clear");
+
+clearBtn.addEventListener("click", () => {
+  console.log("Clear");
+});
+
+const clearAll = () => {
+  prevInput = "0";
+  calculationOperator = "";
+  currentInput = "0";
+};
+
+clearBtn.addEventListener("click", () => {
+  clearAll();
+  updateScreen(currentInput);
+});
